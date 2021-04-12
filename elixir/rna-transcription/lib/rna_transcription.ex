@@ -7,6 +7,11 @@ defmodule RnaTranscription do
   iex> RnaTranscription.to_rna('ACTG')
   'UGAC'
   """
+
+  ###
+  #  charlists are just lists of integers with valid code points for chars
+  #  which is why you need to pattern match against a char literal with ?
+  ###
   @spec to_rna([char]) :: [char]
   def to_rna(?G), do: ?C
   def to_rna(?C), do: ?G
